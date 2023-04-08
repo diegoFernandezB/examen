@@ -82,8 +82,15 @@ h1{
             width: 100%;
             position: absolute;
             
-            
           }
     }
 
-  
+/* loguin */
+
+.btn-primary{
+    margin-top: 2%;
+}
+.recuperar{
+    text-decoration: none;
+    margin-left: 40%;
+}
