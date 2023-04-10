@@ -18,10 +18,10 @@
          </a>
          </div>  
         <div class="menu">
-            <a class="menu_enlace" href="index.html"> Inicio</a>  
-            <a class="menu_enlace" href="index.html"> Contacto</a>  
-            <a class="menu_enlace" href="loguin.html">Iniciar sesion</a>  
-            <a class="menu_enlace menu_enlace--activo" href="registro.html"> registrarse</a>   
+          <a class="menu_enlace" href="index.html">Inicio</a>  
+          <a class="menu_enlace" href="fichaMecas.html">Mecánicos</a>  
+          <a class="menu_enlace" href="fichaServ.html">Servicios</a>  
+          <a class="menu_enlace" href="loguin.html">Iniciar sesion</a>    
         </div>
      </header>
 
@@ -31,11 +31,27 @@
             <form>
               <h1 class="text-center mb-4">Registrarse</h1>
               <div class="form-group">
+                <label for="label"><b>Nombre Completo</b></label>
+                <input type="text" class="form-control" id="text" placeholder="Juan soto" required>
+              </div>
+              <div class="form-group">
                 <label for="label"><b>Usuario</b></label>
-                <input type="text" class="form-control" id="text" required>
+                <input type="text" class="form-control" id="text" placeholder="jsoto" required>
+              </div>
+              <div class="form-group">
+                <label for="label"><b>correo electonico</b></label>
+                <input type="email" class="form-control" id="text" placeholder="jsoto@gmail.com" required>
+              </div>
+              <div class="form-group">
+                <label for="label"><b>confirme correo electonico</b></label>
+                <input type="email" class="form-control" id="text" placeholder="jsoto@gmail.com" required>
               </div>
               <div class="form-group">
                 <label for="password"><b>contraseña</b></label>
+                <input type="password" class="form-control" id="password" required>
+              </div>
+              <div class="form-group">
+                <label for="password"><b>repetir contraseña</b></label>
                 <input type="password" class="form-control" id="password"  required>
               </div>
               <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
