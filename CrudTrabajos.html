@@ -35,26 +35,3 @@
             </div>
         </nav>
     </header>
-
-<div class="containers">
-    <h1>Formulario para subir Trabajos Realizados</h1>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <div class="form-group">
-            <label for="file">Selecciona al menos una fotografía: </label>
-            <input type="file" class="form-control-file" id="file" name="file">
-        </div>   
-        <div class="form-group">
-            <label for="description">Descripción del trabajo realizado: </label>
-            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Subir Archivo</button>
-    </form>
-
-    <div class="form-floating mb-3">
-        <input type="email" readonly class="form-control-plaintext" id="floatingPlaintextInput" placeholder="name@example.com" value="Esta publicación debe ser aprovada por el Administrador">
-        <label for="floatingPlaintextInput">Debes subir al menos una imagen de tu trabajo</label>
-      </div>
-</div>
-
-</body>
-</html>
