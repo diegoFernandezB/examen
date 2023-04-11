@@ -47,38 +47,48 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
+            <a href="trabajo1.html">
             <img src="imagenes/imagen1.webp" class="d-block w-100 img-fluid" alt="...">
+          </a>
             <div class="carousel-caption d-none d-md-block">
-              <h5>Servicio 1 - Socio 2</h5>
-              <p>Nuestro socio 2 realizó nuestro servicio 1</p>
+              <h5>Alineación y balanceo</h5>
+              <p>Trabajo Realizado por Valentin Muñoz </p>
             </div>
           </div>
           <div class="carousel-item">
+            <a href="trabajo2.html">
             <img src="imagenes/imagen2.webp" class="d-block w-100 img-fluid" alt="...">
+            </a>
             <div class="carousel-caption d-none d-md-block">
-              <h5>Servicio 4 - Socio 3</h5>
-              <p>Nuestro socio 3 realizó nuestro servicio 4</p>
+              <h5>Reparacion de motor dañado </h5>
+              <p>Trabajo Realizado por Eliseo Cuevas</p>
             </div>
           </div>
           <div class="carousel-item">
+            <a href="trabajo3.html">
             <img src="imagenes/imagen3.webp" class="d-block w-100 img-fluid" alt="...">
+            </a>
             <div class="carousel-caption d-none d-md-block">
-              <h5>Servicio 2 - Socio 1</h5>
-              <p>SNuestro socio 1 realizó nuestro servicio 2</p>
+              <h5>Cambio de pistones</h5>
+              <p>Trabajo Realizado por Valentin Muñoz</p>
             </div>
           </div>
             <div class="carousel-item">
+                <a href="trabajo4.html">
                 <img src="imagenes/imagen4.webp" class="d-block w-100 img-fluid" alt="...">
+                </a>
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Servicio 3 - Socio 4</h5>
-                  <p>Nuestro socio 4 realizó nuestro servicio 3</p>
+                  <h5>Renovacion electrica total</h5>
+                  <p>Trabajo Realizado por Patricio Araya</p>
                 </div>
               </div>
               <div class="carousel-item">
+                <a href="trabajo5.html">
                 <img src="imagenes/imagen5.webp" class="d-block w-100 img-fluid" alt="...">
+                </a>
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Servicio 5 - Socio 5</h5>
-                  <p>Nuestro socio 5 realizó nuestro servicio 5</p>
+                  <h5>Cambio de radiador</h5>
+                  <p>Trabajo Realizado por Eliseo Cuevas</p>
                 </div>
               </div>
         </div>
@@ -91,8 +101,55 @@
           <span class="visually-hidden">Siguiente</span>
         </button>
       </div>
+
+
+      <!-- prueba del modal -->
+      
+      <button id="miBoton">Contactenos</button>
+
+      <div id="miModal" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar">&times;</span>
+          <h2>Formulario de contacto</h2>
+          <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="juan soto" required>
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="jsoto@gmail.com" required>
+
+            <label for="telefono">Celular (anteponer codigo de area):</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+569 8745 6987" required>
+      
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="En que podemos ayudarte..." required></textarea>
+      
+            <input id="enviar" type="submit" value="Enviar">
+          </form>
+        </div>
+      </div>
       
       
+      <script>
+        var miBoton = document.getElementById("miBoton");
+        var miModal = document.getElementById("miModal");
+        var cerrar = document.getElementsByClassName("cerrar")[0];
+        
+        miBoton.onclick = function() {
+          miModal.style.display = "block";
+        }
+        
+        cerrar.onclick = function() {
+          miModal.style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+          if (event.target == miModal) {
+            miModal.style.display = "none";
+          }
+         
+        }
+        </script>
 
 </body>
 </html>
