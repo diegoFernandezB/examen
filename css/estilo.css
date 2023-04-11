@@ -88,3 +88,26 @@ min-height: 200px;
           }
 }
 
+.containers {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .btn {
+    margin-top: 30px;
+  }
+
+  .form-group label {
+    font-weight: bold;
+  }
+  
