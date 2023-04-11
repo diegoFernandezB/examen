@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>reservar</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header class="header container">
+        <div class="logo">
+         <a href="index.html">
+             <img class="header_logo " src="imagenes/logo.webp" alt="logo" >
+         </a>
+         </div>  
+        <div class="menu">
+          <a class="menu_enlace" href="index.html">Inicio</a>  
+          <a class="menu_enlace" href="fichaMecas.html">Mecánicos</a>  
+          <a class="menu_enlace" href="fichaServ.html">Servicios</a>  
+          <a class="menu_enlace" href="loguin.html">Iniciar sesion</a>    
+        </div>
+     </header>
+
+     <div class="container-fluid h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-sm-12 col-md-8 col-lg-6 col-xl-4">
+            <form>
+              <h1 class="text-center mb-4">Reservar</h1>
+              <div class="form-group">
+                <label for="label"><b>Nombre Completo</b></label>
+                <input type="text" class="form-control" id="text" placeholder="Juan soto" required>
+              </div>
+              <div class="form-group">
+                <label for="label"><b>correo electonico</b></label>
+                <input type="email" class="form-control" id="text" placeholder="jsoto@gmail.com" required>
+              </div>
+              <div class="form-group">
+                <label for="Telefono"><b>Telefono de contacto</b></label>
+                <input type="tel" class="form-control" id="Telefono" placeholder="+569 5489 7562" required>
+              </div>
+              <div class="form-group">
+                <label for="fecha"><b>dia de reserva</b></label>
+                <input type="date" class="form-control" id="fecha" required>
+              </div>
+              <div class="form-group">
+                <label for="hora"><b>Horario de preferencia </b></label>
+                <input type="time" class="form-control" id="hora" required>
+              </div>
+
+             
+             
+              <button type="submit" class="btn btn-primary btn-block">Reservar</button>
+              
+            </form>
+    
+</body>
+</html>
