@@ -38,33 +38,36 @@
 
      <div class="container-fluid h-100">
         <div class="row h-100 justify-content-center align-items-center">
-          <div class="col-sm-12 col-md-8 col-lg-6 col-xl-4">
-            <form>
+          <div class="col-sm-12">
+            <form class="was-validated row col-sm-12">
               <h1 class="text-center mb-4">Reservar</h1>
-              <div class="form-group">
+              <div class="form-group col-sm-4">
                 <label for="label"><b>Nombre Completo</b></label>
-                <input type="text" class="form-control" id="text" placeholder="Juan soto" required>
+                <input type="text" class="form-control" id="text" placeholder="Juan soto" required="">
+              
+                <div class="invalid-feedback"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                  Por favor ingrese un mensaje en el área de texto.
+                </font></font></div>
+                
               </div>
-              <div class="form-group">
+              <div class="form-group col-sm-4">
                 <label for="label"><b>correo electonico</b></label>
-                <input type="email" class="form-control" id="text" placeholder="jsoto@gmail.com" required>
+                <input type="email" class="form-control" id="text" placeholder="jsoto@gmail.com" required="">
               </div>
-              <div class="form-group">
+              <div class="form-group col-sm-4">
                 <label for="Telefono"><b>Telefono de contacto</b></label>
-                <input type="tel" class="form-control" id="Telefono" placeholder="+569 5489 7562" required>
+                <input type="tel" class="form-control" id="Telefono" placeholder="+569 5489 7562" required="">
               </div>
-              <div class="form-group">
+              <div class="form-group col-sm-4">
                 <label for="fecha"><b>dia de reserva</b></label>
-                <input type="date" class="form-control" id="fecha" required>
+                <input type="date" class="form-control" id="fecha" required="">
               </div>
-              <div class="form-group">
+              <div class="form-group col-sm-4">
                 <label for="hora"><b>Horario de preferencia </b></label>
-                <input type="time" class="form-control" id="hora" required>
-              </div>
-
+                <input type="time" class="form-control" id="hora" required="">
+              </div>            
              
-             
-              <button type="submit" class="btn btn-primary btn-block">Reservar</button>
+              <button type="submit" class="col-sm-4 btn btn-primary btn-block">Reservar</button>
               
             </form>
           </div>
