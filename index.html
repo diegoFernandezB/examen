@@ -11,34 +11,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-  <header class="header container">
-    <div class="logo">
-     <a href="index.html">
-         <img class="header_logo" src="imagenes/logo.webp" alt="logo" >
-     </a>
-     </div>  
-    <div class="menu">
-     <a class="menu_enlace menu_enlace--activo" href="index.html">Inicio</a>  
-     <a class="menu_enlace" href="fichaMecas.html">Mecánicos</a>  
-     <a class="menu_enlace" href="fichaServ.html">Servicios</a>  
-     <a class="menu_enlace" href="index.html">Registrarse</a>
-     <a class="menu_enlace" href="index.html">Reserva Tu Hora</a>
-     <a class="menu_enlace" href="index.html">Contáctanos</a>
-     <a class="menu_enlace" href="index.html">Nuestros Trabajos</a>     
-    </div>
-    <nav class="navbar bg-body-tertiary ">
-     <div class="container-fluid ">          
-       <form class="d-flex" role="search">
-         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="search">
-         <button class="btn btn-outline-success" type="submit">Buscar</button>
-       </form>
-     </div>
+    <header class="header container">
+       <div class="logo">
+        <a href="index.html">
+            <img class="header_logo " src="imagenes/logo.webp" alt="logo" >
+        </a>
+        </div>  
+       <div class="menu">
+        <a class="menu_enlace menu_enlace--activo" href="index.html">Inicio</a>  
+        <a class="menu_enlace" href="fichaMecas.html">Mecánicos</a>  
+        <a class="menu_enlace" href="fichaServ.html">Servicios</a>  
+        <a class="menu_enlace" href="registro.html">Registrarse</a>
+        <a class="menu_enlace" href="reserva.html">Reserva Tu Hora</a>
+        <a class="menu_enlace" href="carritoCompras.html">Carrito de compras</a>
+        <a class="menu_enlace" href="index.html">Nuestros Trabajos</a>  
+       </div>
+       <nav class="navbar bg-body-tertiary ">
+        <div class="container-fluid ">          
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+        </div>
    </nav>
     </header>
 
-                <h1>Nuestros Trabajos Realizados</h1>
 
+    <h1>Nuestros Últimos Trabajos</h1>
 
+    
     <div id="carousel" class="carousel slide " data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -49,38 +50,48 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
+            <a href="trabajo1.html">
+            <img src="imagenes/imagen1.webp" class="d-block w-100 img-fluid" alt="...">
+          </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Alineación y balanceo</h5>
+              <p>Trabajo Realizado por Valentin Muñoz </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <a href="trabajo2.html">
             <img src="imagenes/imagen2.webp" class="d-block w-100 img-fluid" alt="...">
+            </a>
             <div class="carousel-caption d-none d-md-block">
-              <h5>Servicio 1 - Socio 2</h5>
-              <p>Servicio 1 Realizado por Socio 2</p>
+              <h5>Reparacion de motor dañado </h5>
+              <p>Trabajo Realizado por Eliseo Cuevas</p>
             </div>
           </div>
           <div class="carousel-item">
+            <a href="trabajo3.html">
             <img src="imagenes/imagen3.webp" class="d-block w-100 img-fluid" alt="...">
+            </a>
             <div class="carousel-caption d-none d-md-block">
-              <h5>Servicio 2 - Socio 1</h5>
-              <p>Servicio 2 Realizado por Socio 1</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="imagenes/imagen4.webp" class="d-block w-100 img-fluid" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Servicio 4 - Socio 3</h5>
-              <p>Servicio 4 Realizado por Socio 3</p>
+              <h5>Cambio de pistones</h5>
+              <p>Trabajo Realizado por Valentin Muñoz</p>
             </div>
           </div>
             <div class="carousel-item">
-                <img src="imagenes/imagen5.webp" class="d-block w-100 img-fluid" alt="...">
+                <a href="trabajo4.html">
+                <img src="imagenes/imagen4.webp" class="d-block w-100 img-fluid" alt="...">
+                </a>
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Servicio 3 - Socio 4</h5>
-              <p>Servicio 3 Realizado por Socio 4</p>
+                  <h5>Renovacion electrica total</h5>
+                  <p>Trabajo Realizado por Patricio Araya</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="imagenes/imagen1.webp" class="d-block w-100 img-fluid" alt="...">
+                <a href="trabajo5.html">
+                <img src="imagenes/imagen5.webp" class="d-block w-100 img-fluid" alt="...">
+                </a>
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Servicio 5 - Socio 5</h5>
-              <p>Servicio 5 Realizado por Socio 5</p>
+                  <h5>Cambio de radiador</h5>
+                  <p>Trabajo Realizado por Eliseo Cuevas</p>
                 </div>
               </div>
         </div>
@@ -93,6 +104,55 @@
           <span class="visually-hidden">Siguiente</span>
         </button>
       </div>
+
+
+      <!-- prueba del modal -->
+      
+      <button id="miBoton">Contactenos</button>
+
+      <div id="miModal" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar">&times;</span>
+          <h2>Formulario de contacto</h2>
+          <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="juan soto" required>
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="jsoto@gmail.com" required>
+
+            <label for="telefono">Celular (anteponer codigo de area):</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+569 8745 6987" required>
+      
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="En que podemos ayudarte..." required></textarea>
+      
+            <input id="enviar" type="submit" value="Enviar">
+          </form>
+        </div>
+      </div>
+      
+      
+      <script>
+        var miBoton = document.getElementById("miBoton");
+        var miModal = document.getElementById("miModal");
+        var cerrar = document.getElementsByClassName("cerrar")[0];
+        
+        miBoton.onclick = function() {
+          miModal.style.display = "block";
+        }
+        
+        cerrar.onclick = function() {
+          miModal.style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+          if (event.target == miModal) {
+            miModal.style.display = "none";
+          }
+         
+        }
+        </script>
 
 </body>
 </html>
