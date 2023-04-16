@@ -220,7 +220,7 @@ min-height: 200px;
 
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
-{
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -229,7 +229,7 @@ min-height: 200px;
 body{
   margin: 0;
   padding: 0;
-  background: linear-gradient(120deg,#2980b9, #8e44ad);
+  background: linear-gradient(120deg,blue,white);
   height: 100vh;
   overflow: hidden;
 }
