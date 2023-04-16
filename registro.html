@@ -38,28 +38,33 @@
 
      <div class="container-fluid h-100">
         <div class="row h-100 align-items-center">
-          <div class="col-sm-4 col-md-6 col-lg-8 col-xl-12">
+          <div class="col-sm-12">
             <form class="was-validated">
               <h1 class="text-center mb-4">Registrarse</h1>
               <div class="form-group">
                 <label for="label"><b>Nombre Completo</b></label>
                 <input type="text" class="form-control col-xl-6" id="text" placeholder="Juan soto" required>
+                <div class="valid-feedback">Perfecto</div>
               </div>
               <div class="form-group">
                 <label for="label"><b>Usuario</b></label>
                 <input type="text" class="form-control col-xl-6" id="text" placeholder="jsoto" required>
+                <div class="valid-feedback">Usuario Disponible</div><div class="invalid-feedback">Ese usuario ya no está disponible</div>
               </div>
               <div class="form-group">
                 <label for="label"><b>correo electonico</b></label>
                 <input type="email" class="form-control col-xl-6" id="text" placeholder="jsoto@gmail.com" required>
+                <div class="valid-feedback">Correo Electrónico Valido!</div><div class="invalid-feedback">Por favor ingrese un correo electrónico valido.</div>
               </div>
               <div class="form-group">
                 <label for="label"><b>confirme correo electonico</b></label>
                 <input type="email" class="form-control col-xl-6" id="text" placeholder="jsoto@gmail.com" required>
+                <div class="valid-feedback">Correo Electrónico Valido!</div><div class="invalid-feedback">Las direcciones de correo no coinciden</div>
               </div>
               <div class="form-group">
                 <label for="password"><b>contraseña</b></label>
                 <input type="password" class="form-control col-xl-6" id="password" required>
+                <div class="valid-feedback">Correo Electrónico Valido!</div><div class="invalid-feedback">La contraseña debo contener </div>
               </div>
               <div class="form-group">
                 <label for="password"><b>repetir contraseña</b></label>
