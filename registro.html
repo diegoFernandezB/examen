@@ -18,13 +18,13 @@
          </a>
          </div>  
         <div class="menu">
-          <a class="menu_enlace menu_enlace--activo" href="index.html">Inicio</a>  
+          <a class="menu_enlace" href="index.html">Inicio</a>  
             <a class="menu_enlace" href="fichaMecas.html">Mecánicos</a>  
             <a class="menu_enlace" href="fichaServ.html">Servicios</a>  
-            <a class="menu_enlace" href="registro.html">Registrarse</a>
+            <a class="menu_enlace  menu_enlace--activo" href="registro.html">Registrarse</a>
             <a class="menu_enlace" href="reserva.html">Reserva Tu Hora</a>
             <a class="menu_enlace" href="carritoCompras.html">Carrito de compras</a>
-            <a class="menu_enlace" href="index.html">Nuestros Trabajos</a>     
+            <a class="menu_enlace" href="loguin.html">Iniciar Sesión</a>     
         </div>
         <nav class="navbar bg-body-tertiary ">
           <div class="container-fluid ">          
@@ -37,33 +37,39 @@
      </header>
 
      <div class="container-fluid h-100">
-        <div class="row h-100 justify-content-center align-items-center">
-          <div class="col-sm-12 col-md-8 col-lg-6 col-xl-4">
-            <form>
+        <div class="row h-100 align-items-center">
+          <div class="col-sm-12">
+            <form class="was-validated">
               <h1 class="text-center mb-4">Registrarse</h1>
-              <div class="form-group">
+              <div class="form-group col-sm-4">
                 <label for="label"><b>Nombre Completo</b></label>
                 <input type="text" class="form-control" id="text" placeholder="Juan soto" required>
+                <div class="valid-feedback">Perfecto</div>
               </div>
-              <div class="form-group">
+              <div class="form-group col-sm-4">
                 <label for="label"><b>Usuario</b></label>
                 <input type="text" class="form-control" id="text" placeholder="jsoto" required>
+                <div class="valid-feedback">Usuario Disponible</div><div class="invalid-feedback">Ese usuario ya no está disponible</div>
               </div>
-              <div class="form-group">
+              <div class="form-group col-sm-4">
                 <label for="label"><b>correo electonico</b></label>
                 <input type="email" class="form-control" id="text" placeholder="jsoto@gmail.com" required>
+                <div class="valid-feedback">Correo Electrónico Valido!</div><div class="invalid-feedback">Por favor ingrese un correo electrónico valido.</div>
               </div>
-              <div class="form-group">
+              <div class="form-group col-sm-4">
                 <label for="label"><b>confirme correo electonico</b></label>
                 <input type="email" class="form-control" id="text" placeholder="jsoto@gmail.com" required>
+                <div class="valid-feedback">Correo Electrónico Valido!</div><div class="invalid-feedback">Las direcciones de correo no coinciden</div>
               </div>
-              <div class="form-group">
+              <div class="form-group col-sm-4">
                 <label for="password"><b>contraseña</b></label>
                 <input type="password" class="form-control" id="password" required>
+                <div class="invalid-feedback">La contraseña debe tener un mínimo de 6 caracteres, incluir números, letras en mayúsculas y minúsculas e incluir un carácter especial.</div>
               </div>
-              <div class="form-group">
+              <div class="form-group col-sm-4">
                 <label for="password"><b>repetir contraseña</b></label>
                 <input type="password" class="form-control" id="password"  required>
+                <div class="invalid-feedback">La contraseña debe tener un mínimo de 6 caracteres, incluir números, letras en mayúsculas y minúsculas e incluir un carácter especial.</div>
               </div>
               <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
               
