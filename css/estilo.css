@@ -121,10 +121,9 @@ min-height: 200px;
 
 
 #miBoton{
-    
-    background-color: #0906df;
-    color: var(--blanco);
-    margin-left: 85%;
+  background-color: #0906df;
+  color: var(--blanco);
+  margin-left: 85%;
 }
 
 /* Estilos para el contenedor del modal */
@@ -209,7 +208,9 @@ min-height: 200px;
     display: inline-block;
     margin-top: 1%;
   }
+
   @media (max-width: 728px) {
+
     .fich_autos{
       display: block;
       margin-top: 1%;
@@ -217,7 +218,6 @@ min-height: 200px;
     .datos{
       display: block;
       margin-top: -500px;
-
     }
         
 }
@@ -336,3 +336,28 @@ input[type="submit"]:hover{
 .signup_link a:hover{
   text-decoration: underline;
 }
+
+    }
+    .buscar{
+      display: block;
+      width: 50%;
+      margin-left: 28%;
+    }
+    .container{
+      padding-bottom: 3%;
+    }
+
+    #miBoton{
+      background-color: #0906df;
+      color: var(--blanco);
+      margin-top: 420px;
+      margin-left: auto;
+      width: 100%;
+      
+    }
+    
+  }
+
+  
+  
+
