@@ -7,12 +7,7 @@ h1{
     font-size: 1.6rem;
 }
 .container  {
-    display: flex;
-<<<<<<< HEAD
-    background-color: rgb(38, 0, 255);
-=======
-    background-color: rgb(96, 96, 255);
->>>>>>> main
+    
     margin-top: 5px;
 }
 
@@ -82,7 +77,7 @@ min-height: 200px;
     color: white;
 }
 .carousel {
-    margin-top: 5px;
+    margin-top: 25px;
   }
 
   #carousel{
@@ -233,11 +228,7 @@ min-height: 200px;
 body{
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
-  background: linear-gradient(120deg,blue,white);
-=======
   background: linear-gradient(120deg,rgb(96, 96, 255),white);
->>>>>>> main
   height: 100vh;
   overflow: hidden;
 }
