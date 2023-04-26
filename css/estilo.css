@@ -12,16 +12,20 @@ h1{
     margin-top: 5px;
 }
 
+
 .bg-light{
 min-height: 200px;
 }
-
-
-
-
 .header_logo{
-    width: 40%;
+  width: 90%;
+  height:100%;
+  }
+
+.logo{
+  margin-right: 600px;
 }
+
+
 @media (max-width: 768px) {
     .container {
         margin-top: 50px;
@@ -62,18 +66,19 @@ min-height: 200px;
     margin-top: 3%;
     text-align: center;
     width: 100%;
+    margin-left: -827px;
     
 }
 .menu_enlace{
         color: var(--blanco);
         text-decoration: none;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin-left: 10px;
 }
-
-.menu_enlace:last-of-type {
-    margin-left: none;
+.menu_enlace:first-of-type{
+  margin-left: none;
 }
+
 .menu_enlace--activo {
     color: white;
 }

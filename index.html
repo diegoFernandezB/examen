@@ -8,16 +8,17 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Rayo Makween</title>
     <link rel="stylesheet" href="css/estilo.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/normalice.css">
+    
 </head>
 <body>
-    <header class="header container">
+    <header class="header container col">
        <div class="logo">
         <a href="index.html">
             <img class="header_logo " src="imagenes/logo.webp" alt="logo" >
         </a>
         </div>  
-       <div class="menu">
+       <div class="menu col-6">
         <a class="menu_enlace menu_enlace--activo" href="index.html">Inicio</a>  
         <a class="menu_enlace" href="fichaMecas.html">Mecánicos</a>  
         <a class="menu_enlace" href="fichaServ.html">Servicios</a>  
@@ -26,14 +27,14 @@
         <a class="menu_enlace" href="carritoCompras.html">Carrito de compras</a>
         <a class="menu_enlace" href="index.html">Nuestros Trabajos</a>  
        </div>
-       <nav class="navbar bg-body-tertiary ">
+       <nav class="navbar bg-body-tertiary  col">
         <div class="container-fluid ">          
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="search">
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
             </form>
         </div>
-   </nav>
+        </nav>
     </header>
 
 
@@ -114,45 +115,26 @@
         <div class="modal-contenido">
           <span class="cerrar">&times;</span>
           <h2>Formulario de contacto</h2>
-          <form class="was-validated">
+          <form class="was-validated row g-3">
             <label for="nombre">Nombre:</label>
             <input type="text"  class="form-control" id="nombre" name="nombre" placeholder="juan soto" required>
       
             <label for="email">Email:</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="jsoto@gmail.com" required>
 
-            <label for="telefono">Celular (anteponer codigo de area):</label>
-            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="+569 8745 6987" required>
-      
+            <label for="telefono">Celular (anteponer codigo de area):</label> 
+            <div class="input-group">
+            <span class="input-group-text col-md-1" id="inputGroupPrepend2">+56</span>
+            <input type="tel" class="form-control col-md-4" id="telefono" name="telefono" placeholder="9 8745 6987" required>
+            </div>
             <label for="mensaje">Mensaje:</label>
             <textarea id="mensaje" name="mensaje" placeholder="En que podemos ayudarte..." required></textarea>
       
-            <input id="enviar" type="submit" value="Enviar">
+            <input id="miBoton2" type="submit" value="Enviar">
           </form>
         </div>
       </div>
-      
-      
-      <script>
-        var miBoton = document.getElementById("miBoton");
-        var miModal = document.getElementById("miModal");
-        var cerrar = document.getElementsByClassName("cerrar")[0];
-        
-        miBoton.onclick = function() {
-          miModal.style.display = "block";
-        }
-        
-        cerrar.onclick = function() {
-          miModal.style.display = "none";
-        }
-        
-        window.onclick = function(event) {
-          if (event.target == miModal) {
-            miModal.style.display = "none";
-          }
-         
-        }
-        </script>
-
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js.js"></script>
 </html>
