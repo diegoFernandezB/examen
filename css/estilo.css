@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
 :root{
     --blanco : white;
 }
@@ -90,14 +91,18 @@ min-height: 200px;
     #carousel{
         width: 100%;
         position: absolute;
+        left: 50%;
+        margin-left: -300px;
       }
 }
 
-@media (max-width: 500px) {
+@media(max-width: auto ) {
     
         #carousel{
             width: 100%;
-            position: absolute;            
+            position: absolute;
+            left: 50%;
+            margin-left: -300px;            
           }
 }
 
@@ -120,6 +125,15 @@ min-height: 200px;
     color: var(--blanco);
     margin-left: 85%;
 }
+
+@media(max-width:500px){
+  #miBoton{
+    
+  background-color: #da871c;
+  color: var(--blanco);
+  margin-left: 85%;
+  }
+}  
 
 /* Estilos para el contenedor del modal */
 .modal {
@@ -218,7 +232,6 @@ min-height: 200px;
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
 *{
   margin: 0;
   padding: 0;
