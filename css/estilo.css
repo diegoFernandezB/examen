@@ -116,7 +116,7 @@ min-height: 200px;
 
 #miBoton{
     
-    background-color: #0906df;
+    background-color: #da871c;
     color: var(--blanco);
     margin-left: 85%;
 }
@@ -228,7 +228,7 @@ min-height: 200px;
 body{
   margin: 0;
   padding: 0;
-  background: linear-gradient(120deg,rgb(96, 96, 255),white);
+  background: linear-gradient(120deg,white,rgb(219, 219, 223));
   height: 100vh;
   overflow: hidden;
 }
