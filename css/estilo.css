@@ -18,7 +18,7 @@ min-height: 200px;
 
 .pie-pagina{
   width: 100%;
-  background-color: #c9d2d0;
+  background-color: #f7f7f7;
 }
 .pie-pagina .grupo-1{
   width: 100%;
@@ -26,8 +26,8 @@ min-height: 200px;
   margin: auto;
   display:grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 50px;
-  padding: 45px 0px;
+  gap: 50px;
+  padding: 0px 0px;
 
 }
 .pie-pagina .grupo-1 .box figure{
@@ -38,7 +38,7 @@ min-height: 200px;
   align-items: center;
 }
 .pie-pagina .grupo-1 .box figure img{
-  width: 200px;
+  width: 0px;
 
 }
 .pie-pagina .grupo-1 .box h2{
