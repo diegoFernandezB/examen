@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
-:root{
+*:root{
     --blanco : white;
 }
 
@@ -16,10 +16,18 @@ h1{
 min-height: 200px;
 }
 
-.pie-pagina{
+footer {
+  position: fixed;
+  bottom: 0;
   width: 100%;
   background-color: #f7f7f7;
+  text-align: center;
+  padding: 10px;
 }
+/* .pie-pagina{
+  width: 100%;
+  background-color: #f7f7f7;
+} */
 .pie-pagina .grupo-1{
   width: 100%;
   max-width: 1200px;
