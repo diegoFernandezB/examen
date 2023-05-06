@@ -20,14 +20,11 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #f7f7f7;
+  background-color: whitesmoke;
   text-align: center;
   padding: 10px;
 }
-/* .pie-pagina{
-  width: 100%;
-  background-color: #f7f7f7;
-} */
+
 .pie-pagina .grupo-1{
   width: 100%;
   max-width: 1200px;
