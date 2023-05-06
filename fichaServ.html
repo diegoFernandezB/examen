@@ -1,54 +1,64 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <title>Rayo Makween - Servicios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>Rayo Makween</title>
     <link rel="stylesheet" href="css/estilo.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/bdc9c592e0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header container">
-       <div class="logo">
-        <a href="index.html">
-            <img class="header_logo" src="imagenes/logo.webp" alt="logo" >
-        </a>
-        </div>  
-       <div class="menu">
-        <a class="menu_enlace" href="index.html">Inicio</a>  
-        <a class="menu_enlace" href="fichaMecas.html">Mecánicos</a>  
-        <a class="menu_enlace menu_enlace--activo" href="fichaServ.html">Servicios</a>  
-
-        <a class="menu_enlace" href="loguin.html">inicio sesion</a>
-        <a class="menu_enlace" href="reserva.html">Reserva Tu Hora</a>
-        <a class="menu_enlace" href="carritoCompras.html">Carrito de compras</a>
-        <a class="menu_enlace" href="index.html">Nuestros Trabajos</a>   
-       </div>
-       <nav class="navbar bg-body-tertiary ">
-        <div class="container-fluid ">          
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="search">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
-        </div>
-   </nav>
-
-        <a class="menu_enlace" href="loguin.html">Iniciar sesion</a>  
-       </div>
-       <nav class="navbar bg-body-tertiary buscar">
-        <div class="container-fluid ">          
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="search">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
-          </form>
-        </div>
-      </nav>
-
-    </header>
+<header>
+  <nav class="navbar navbar-expand-lg" style="background-color: whitesmoke;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+    <img src="/imagenes/95.png" alt="logo" width="150px">      
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="fichaServ.html">Servicios</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Nuestros Últimos Trabajos
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="trabajo1.html">Alineación y balanceo</a></li>
+            <li><a class="dropdown-item" href="trabajo2.html">Sobrecalentamiento del motor</a></li>
+            <li><a class="dropdown-item" href="trabajo3.html">Daños en los Pistones</a></li>
+            <li><a class="dropdown-item" href="trabajo4.html">Cambio de ramal eléctrico</a></li>
+            <li><a class="dropdown-item" href="trabajo5.html">Reparación de Radiador</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="fichaMecas.html">Nuestros Mecánicos</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="loguin.html">Iniciar Sesión</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="reserva.html">Reserva tu hora</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="carritoCompras.html">Carrito De Compras</a>
+        </li>       
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+</header>
 
          
     <div class="container-fluid">
@@ -56,7 +66,7 @@
     </div>
     
 
-    <div class="...">
+    <div class="container">
       <div class="row row-cols md-6 justify-content-center">
         <div class="col">
           <div class="card h-100">            
@@ -124,9 +134,33 @@
       </div>
     </div>
 
+   
+    <footer class="pie-pagina">
+      <hr size="10px" color="black" />
+      <div class="container">
+        <div class="grupo-1">
+          <div class="box">            
+            <a href="index.html">
+              <img src="imagenes/95.png" alt="Logo" width="95px">
+            </a>          
+          </div>
+          <div class="box"> </div>            
+          <div class="box">
+            <h2>SIGUENOS</h2>
+            <div class="red-social">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-youtube"></a>
+            </div>
+          </div>
+        </div>    
+        <div class="grupo-2">
+          <small>&copy; 2023 <b>Rayo Makween</b> - Todos los Derechos Reservados.</small>
+        </div>
+      </div>
+    </footer>
 
-    
-
-</body>
-
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+  </html>
