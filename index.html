@@ -8,6 +8,8 @@
     <title>Rayo Makween</title>
     <link rel="stylesheet" href="css/estilo.css">
     <script src="https://kit.fontawesome.com/bdc9c592e0.js" crossorigin="anonymous"></script>
+    <script src="funciones.js" ></script>
+    
 </head>
 <body>
 <header>
@@ -139,43 +141,29 @@
           <h2>Formulario de contacto</h2>
           <form class="was-validated">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="juan soto" required>
+            <input type="text" id="nombreind" name="nombre" placeholder="juan soto" required>
       
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="jsoto@gmail.com" required>
+            <input type="email" id="emailind" name="email" placeholder="jsoto@gmail.com" required>
 
-            <label for="telefono">Celular (anteponer codigo de area):</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="+569 8745 6987" required>
+            
+            <label for="telefono">Telefono:</label>  
+            <div class="input-group mb-3">
+              <span class="input-group-text">+56</span>
+              <div class="form-floating">
+              <input type="tel" id="telefonoind" placeholder="9 8745 6987">
+                
+              </div>
+            </div>
       
             <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" placeholder="En que podemos ayudarte..." required></textarea>
+            <textarea id="mensaje" name="mensajeind" placeholder="En que podemos ayudarte..." required></textarea>
       
-            <input id="enviar" type="submit" value="Enviar">
+            <input id="enviarind" type="submit" value="Enviar">
           </form>
         </div>
       </div>
       
-      
-      <script>
-        var miBoton = document.getElementById("miBoton");
-        var miModal = document.getElementById("miModal");
-        var cerrar = document.getElementsByClassName("cerrar")[0];
-        
-        miBoton.onclick = function() {
-          miModal.style.display = "block";
-        }
-        
-        cerrar.onclick = function() {
-          miModal.style.display = "none";
-        }
-        
-        window.onclick = function(event) {
-          if (event.target == miModal) {
-            miModal.style.display = "none";
-          }
-         
-        }
-        </script>
 </div>
 
 <footer class="pie-pagina">
@@ -205,5 +193,6 @@
 </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="js.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 var miBoton = document.getElementById("miBoton");
 var miModal = document.getElementById("miModal");
 var cerrar = document.getElementsByClassName("cerrar")[0];
@@ -16,3 +17,6 @@ window.onclick = function(event) {
   }
  
 }
+
+
+
