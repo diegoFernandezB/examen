@@ -17,7 +17,7 @@ min-height: 200px;
 }
 
 footer {
-  position: fixed;
+  margin-top: 40%;
   bottom: 0;
   width: 100%;
   background-color: whitesmoke;
@@ -25,6 +25,20 @@ footer {
   padding: 1px;
 }
 
+@media (max-width: 768px) {
+    footer {
+    margin-top: 90%;
+    bottom: 0;
+    width: 100%;
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 1px;
+  }
+      
+}
+.fichaas{
+  margin-top: 5%;
+}
 .pie-pagina .grupo-1{
   width: 100%;
   max-width: 1200px;
@@ -300,7 +314,7 @@ body{
   padding: 0;
   background: linear-gradient(120deg,white,rgb(219, 219, 223));
   height: 100vh;
-  overflow: hidden;
+
 }
 .center{
   position: absolute;
