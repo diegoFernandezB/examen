@@ -415,32 +415,26 @@ input[type="submit"]:hover{
 .signup_link a:hover{
   text-decoration: underline;
 }
-.imagenjq{
-  width: 50%;
-  text-align: end;
-  float: right;
-}
-.botnBuscar{
-  width: 30%;
-  height: 10%;
-  font-size: 11px;
-  background-color: #da871c;
-  color: var(--blanco);
+
+
+  
+section{
+  display: flex;
+  width: 600px;
+  height: 430px;
 }
 
-@media (max-width: 768px) {
-  .imagenjq{
-    margin-top: 55%;
-    margin-right: 30%;
-    width: 50%;
-    text-align: end;
-    
-  }
-  .botnBuscar{
-    width: 30%;
-    height: 10%;
-    font-size: 11px;
-    background-color: #da871c;
-    color: var(--blanco);
-  }
+section img{
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
+}
+
+section img:hover{
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
 }
