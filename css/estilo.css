@@ -415,3 +415,32 @@ input[type="submit"]:hover{
 .signup_link a:hover{
   text-decoration: underline;
 }
+.imagenjq{
+  width: 50%;
+  text-align: end;
+  float: right;
+}
+.botnBuscar{
+  width: 30%;
+  height: 10%;
+  font-size: 11px;
+  background-color: #da871c;
+  color: var(--blanco);
+}
+
+@media (max-width: 768px) {
+  .imagenjq{
+    margin-top: 55%;
+    margin-right: 30%;
+    width: 50%;
+    text-align: end;
+    
+  }
+  .botnBuscar{
+    width: 30%;
+    height: 10%;
+    font-size: 11px;
+    background-color: #da871c;
+    color: var(--blanco);
+  }
+}
