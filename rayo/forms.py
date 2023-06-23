@@ -3,7 +3,7 @@ from .models import mecanico, cliente, administrador, Archivo
 
 from django.forms import ModelForm
 
-class mecanicoForm(ModelForm):
+class mecanicoForm(forms.ModelForm):
     class Meta:
         model = mecanico
         exclude = ('contrasena_meca',)
@@ -25,7 +25,7 @@ class mecanicoForm(ModelForm):
             'direccion_meca': forms.TextInput(attrs={'class': 'form-control mt-2'}),
         }
 
-class clienteForm(ModelForm):
+class clienteForm(forms.ModelForm):
     class Meta:
         model = cliente
         exclude = ('contrasena_cli',)
@@ -49,7 +49,7 @@ class clienteForm(ModelForm):
             'direccion_cli': forms.TextInput(attrs={'class': 'form-control mt-2'}),
         }
 
-class administradorForm(ModelForm):
+class administradorForm(forms.ModelForm):
     class Meta:
         model = administrador
         exclude = ('contrasena_admin',)
@@ -71,7 +71,7 @@ class administradorForm(ModelForm):
             'direccion_admin': forms.TextInput(attrs={'class': 'form-control mt-2'}),
         }
 
-class ArchivoForm(ModelForm):
+class ArchivoForm(forms.ModelForm):
     class Meta:
         model = Archivo
         exclude = ('id_archivo',)
