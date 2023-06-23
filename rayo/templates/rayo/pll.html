@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'rayo/base.html' %}
 
 {% load static %}
@@ -130,3 +131,137 @@
 	</div>
 
 {% endblock%}
+=======
+{% extends 'rayo/base.html' %}
+
+{% load static %}
+{% block content %}
+    <div class="container-sm">
+        <h1>Nuestros Trabajos Realizados</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <a href="#" data-toggle="modal" data-target="#myModal1">
+                    <img src="/imagenes/imagen1.webp" alt="Foto 1" class="thumbnail">
+                </a>
+                <p>Descripción del Trabajo 1</p>
+            </div>
+            <div class="col-md-6">
+                <a href="#" data-toggle="modal" data-target="#myModal2">
+                    <img src="/imagenes/imagen2.webp" alt="Foto 2" class="thumbnail">
+                </a>
+                <p>Descripción del Trabajo 2</p>
+            </div>
+            <div class="col-md-6">
+                <a href="#" data-toggle="modal" data-target="#myModal3">
+                    <img src="/imagenes/imagen3.webp" alt="Foto 3" class="thumbnail">
+                </a>
+                <p>Descripción del Trabajo 3</p>
+            </div>
+            <div class="col-md-6">
+                <a href="#" data-toggle="modal" data-target="#myModal4">
+                    <img src="/imagenes/imagen1.webp" alt="Foto 4" class="thumbnail">
+                </a>
+                <p>Descripción del Trabajo 4</p>
+            </div>
+            <div class="col-md-6">
+                <a href="#" data-toggle="modal" data-target="#myModal5">
+                    <img src="/imagenes/imagen1.webp" alt="Foto 5" class="thumbnail">
+                </a>
+                <p>Descripción del Trabajo 5</p>
+            </div>
+        </div>
+    </div>
+        
+        <!-- Modal 1 -->
+        <div id="myModal1" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Contenido del modal -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Foto 1</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="foto1.jpg" alt="Foto 1">
+                        <p>Descripción de la foto 1</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="myModal2" class="modal fade" role="dialog">
+            <div class="modal-dialog">            
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Foto 2</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="foto2.jpg" alt="Foto2">
+                        <p>Descripción de la foto 2</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <div id="myModal3" class="modal fade" role="dialog">
+            <div class="modal-dialog">            
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Foto 3</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="foto2.jpg" alt="Foto3">
+                        <p>Descripción de la foto 3</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div id="myModal4" class="modal fade" role="dialog">
+            <div class="modal-dialog">            
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Foto 4</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="foto2.jpg" alt="Foto3">
+                        <p>Descripción de la foto 4</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div id="myModal5" class="modal fade" role="dialog">
+            <div class="modal-dialog">            
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Foto 5</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="foto2.jpg" alt="Foto3">
+                        <p>Descripción de la foto 5</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+	</div>
+
+{% endblock%}
+>>>>>>> 15b342c2a414660272a06bb0b89177a4567c1306

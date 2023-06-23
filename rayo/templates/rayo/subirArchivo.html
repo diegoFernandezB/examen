@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'rayo/base.html' %}
 
 {% load static %}
@@ -55,4 +56,63 @@
         <label for="floatingPlaintextInput">Debes subir al menos una imagen de tu trabajo</label>
     </div>
 </div>
+=======
+{% extends 'rayo/base.html' %}
+
+{% load static %}
+{% block content %}
+<div class="containers">
+    <h1>Formulario para subir Trabajos Realizados</h1>
+    <form class="was-validated" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <br>
+        <div class="form-group col-sm-4">
+            <label for="">Tipo Vehiculo</label>
+            <input type="text" name="txttipoVehi" id="txttipoVehi">          
+        </div>        
+        <br>
+        <div class="form-group col-sm-4">
+            <label for="">Rut Mecánico</label>
+            <input type="text" name="txtrutMeca" id="txtrutMeca">          
+        </div>
+        <br>
+        <div class="form-group col-sm-4">
+            <label for="">Fecha Ingreso</label>
+            <input type="date" name="txtfechaIngreso" id="txtfechaIngreso">          
+        </div>
+        <br>
+        <div class="form-group col-sm-4">
+            <label for="">Tiempo Estimado</label>
+            <input type="text" name="txttiempoEstim" id="txttiempoEstim">          
+        </div>
+        <br>
+        <div class="form-group col-sm-4">
+            <label for="">Diagnostico</label>
+            <input type="text" name="txtDG" id="txtDG">          
+        </div>
+        <br>
+        <div class="form-group col-sm-4">
+            <label for="">Herramientas</label>
+            <input type="text" name="txtherramientas" id="txtherramientas">          
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="description">Descripción del trabajo realizado: </label>
+            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+        </div>
+        <br>        
+        <div class="form-group">
+            <label for="file">Selecciona al menos una fotografía: </label>
+            <input type="file" class="form-control-file" id="txtArchivo" name="txtArchivo">
+        </div>   
+       
+        <button type="submit" class="btn btn-primary" name="subirArchivobtn">Subir Archivo</button>
+    </form>
+
+    <div class="form-floating mb-3">
+        <input type="text" readonly class="form-control-plaintext" id="floatingPlaintextInput" placeholder="name@example.com" value="Esta publicación debe ser aprovada por el Administrador">
+        <label for="floatingPlaintextInput">Debes subir al menos una imagen de tu trabajo</label>
+    </div>
+</div>
+>>>>>>> 15b342c2a414660272a06bb0b89177a4567c1306
 {% endblock%} 

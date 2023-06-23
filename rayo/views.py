@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
-from . models import cliente, administrador, mecanico
+from .models import cliente, administrador, mecanico, Archivo
 from django.contrib.auth import authenticate, login 
 from django.views.decorators.csrf import csrf_exempt 
+from .forms import ArchivoForm
 # Create your views here.
 
 
@@ -26,7 +27,7 @@ def fichamecas(request):
     context = {}
     return render (request, 'rayo/fichamecas.html', context)
 
-@csrf_exempt
+@csrf_exempt 
 def loguin(request):
     if request.method == 'POST':
         usuario = request.POST.get('usuario')
@@ -65,21 +66,81 @@ def pll(request):
     return render (request, 'rayo/pll.html', context)
 
 def registro(request):
-   context = {}
-      
-   return render(request, 'rayo/registro.html', context )
+    context = {}
+    return render (request, 'rayo/registro.html', context)
 
 def reserva(request):
     context = {}
     return render (request, 'rayo/reserva.html', context)
 
 def subirArchivo(request):
+    archivo = Archivo.objects.all()
+    context = {'archivo':archivo}
+    print("Enviando Datos")  
+    return render (request, 'rayo/subirArchivo.html', context)
+
+def subirArchivo_add(request):
     context = {}
-    if request.method != 'POST':
-        return render (request, 'rayo/subirArchivo.html', context)
+    if request.method == "POST":
+        form = ArchivoForm(request.POST)
+        if form.is_valid:
+            print("Estas en agregar, is_valid")
+            form.save()
+
+            form = ArchivoForm()
+
+            context = {'mensaje':'OK, datos grabados...','form':form}
+            return render(request, 'rayo/subirArchivo.html',context)
     else:
-        
-        return redirect(index)
+        form = ArchivoForm()
+        context = {'form': form}
+        return render (request, 'rayo/subirArchivo.html', context)
+
+def subirArchivo_del(request, pk):
+    mensajes = []
+    errores = []
+    archivos = Archivo.objects.all()
+    try:
+        archivo = Archivo.objects.get(id_archivo=pk)
+        context = {}
+        if archivo:
+            archivo.delete()
+            mensajes.append('Archivos Eliminados Correctamente...')
+            context = {'archivos': archivos, 'mensajes': mensajes, 'errores':errores}
+            return render (request, 'rayo/subirArchivo.html', context)
+    except:
+        print("Error ID no existe...")
+        archivos = Archivo.objects.all()
+        mensaje = "Error ID no existe..."
+        context = {'mensaje': mensaje, 'archivos': archivos}
+        return render(request, 'rayo/subirArchivo.html', context)
+
+def subirArchivo_edit(request, pk):
+    try:
+        archivo = Archivo.objects.get(id_genero=pk)
+        context = {}
+        if archivo:
+            print("Edit encontró el Archivo...")
+            if request.method == "POST":
+                print("edit, es un POST" )
+                form = ArchivoForm(request.POST,instance = archivo)
+                form.save()
+                mensaje = "Datos Actualizados..."
+                print(mensaje)
+                context = {'archivo': archivo, 'form': form,'mensaje': mensaje}
+                return render(request, 'rayo/subirArchivo.html', context)
+            else:
+                print("edit, no es un post")
+                form = ArchivoForm(instance=archivo)
+                mensaje = ""
+                context = {'archivo': archivo, 'form': form,'mensaje': mensaje}
+                return render(request, 'rayo/subirArchivo.html', context)
+    except:
+        print("Error, id no existe...")
+        archivos = Archivo.objects.all()
+        mensaje = "Error, id no existe..."
+        context = {'mensaje': mensaje,'archivos': archivos}
+        return render(request, 'rayo/subirArchivo.html')
 
 def trabajo1(request):
     context = {}
@@ -105,10 +166,3 @@ def base(request):
     context= {}
     return render (request, 'rayo/base.html', context)
 
-
-
-
-
-
-    
-    

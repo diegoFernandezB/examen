@@ -3,6 +3,8 @@ from django.contrib.auth.hashers import make_password, check_password
 from django.core.validators import EmailValidator, MinLengthValidator
 from django.utils import timezone
 from django.conf import settings
+from django.contrib.auth import get_user_model
+User=get_user_model()
 
 # Create your models here.
 
@@ -55,7 +57,7 @@ class administrador(models.Model):
     def __str__(self):
         return str(self.nom_admin)+" "+str(self.appater_admin)+ " "+ str(self.apmater_admin)
     
-class archivo (models.Model):
+class Archivo (models.Model):
     id_archivo = models.AutoField(primary_key=True, unique=True, blank=True)
     rut_meca = models.ForeignKey('mecanico', on_delete=models.CASCADE)
     tipo_vehiculo = models.CharField(blank=False,null=False,max_length=20)
@@ -68,4 +70,19 @@ class archivo (models.Model):
     def __str__(self):
         return str(self.id_archivo)
 
-  
+class Categoria (models.Model):
+    id_categoria = models.AutoField(primary_key=True,unique=True,)
+    nombre_cat = models.CharField(blank=False,null=False,max_length=20)
+    estado = models.BooleanField()
+    def __str__(self):
+        return str(self.nombre_cat)
+
+class palabraClave (models.Model):
+    id_palabras = models.AutoField(primary_key=True, unique=True)
+    palabra = models.CharField(blank=False,null=False, max_length=20)
+    categorias = models.ManyToManyField('Categoria')
+    def __str__(self):
+        return str(self.palabra)
+    
+    
+                               
