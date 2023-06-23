@@ -49,10 +49,6 @@
         <li class="nav-item">
           {% if user.is_authenticated%}
             {{user.username}}
-          
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'logout'%}">Cerrar Sesión</a>
-            </li>
           {% else %}
           <a class="nav-link" href="{% url 'loguin'%}">Iniciar Sesión</a>
           {% endif %}

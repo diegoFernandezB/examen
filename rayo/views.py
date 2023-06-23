@@ -3,6 +3,7 @@ from .models import cliente, administrador, mecanico, Archivo
 from django.contrib.auth import authenticate, login 
 from django.views.decorators.csrf import csrf_exempt 
 from .forms import ArchivoForm
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
@@ -27,6 +28,7 @@ def fichamecas(request):
     context = {}
     return render (request, 'rayo/fichamecas.html', context)
 
+@login_required
 @csrf_exempt 
 def loguin(request):
     if request.method == 'POST':
@@ -35,10 +37,10 @@ def loguin(request):
         user = authenticate(request, username=usuario, password=password)
         if user is not None:
             login(request, user)
-            return redirect('subirArchivo')
+            return redirect('index')
         else:
             error_message = 'Credenciales invalidas. Por favor ingrese nuevamente.'
-            return render(request, 'loguin.html',{'error_message': error_message})
+            return render(request, 'rayo/loguin.html',{'error_message': error_message})
     return render (request, 'rayo/loguin.html')
 
 def meca1(request):
