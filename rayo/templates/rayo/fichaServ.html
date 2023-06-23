@@ -1,0 +1,77 @@
+{% extends 'rayo/base.html' %}
+
+{% load static %}
+{% block content %}         
+    <div class="container-fluid">
+        <h1>Nuestros Servicios</h1>
+    </div>
+    
+
+    <div class="container">
+      <div class="row row-cols md-6 justify-content-center">
+        <div class="col">
+          <div class="card h-100">            
+            <img src="../../static/imagenes/imagen1.webp" class="card-img-top" alt="serv" width="100%" height="218px" aria-label="Marcador de posición: tapa de imagen" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Servicio1</title><rect width="100%" height="100%" fill="#868e96"></rect> <text x="50%" y="50%" fill="#dee2e6" dy=".3em"></text></svg>
+            <div class="card-body">
+              <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alineacion y valanceo</font></font></h5>
+              <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font>realizamos el diagnostico y la alineacion en el tiempo mas corto posible</font></p>
+              <p>Tiempo Estimado: 30 min - 1 hora</p>
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <a href="{% url 'reserva'%}">
+                  <button class="btn btn-primary" type="button">Reserva tu hora</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">            
+            <img src="../../static/imagenes/servicio2.jpg" class="card-img-top" alt="meca2" width="100%" height="218px" aria-label="Marcador de posición: tapa de imagen" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Servicio2</title><rect width="100%" height="100%" fill="#868e96"></rect> <text x="50%" y="50%" fill="#dee2e6" dy=".3em"></text></svg>
+            <div class="card-body">
+              <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Medicion y cambio de aceite</font></font></h5>
+              <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Realizamos cambios de aceite y filtro, trabajamos con las mejores marcas del mercado </font></font></p>
+              <p>Tiempo Estimado: 1 hora </p>
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <a href="{% url 'reserva'%}">
+                  <button class="btn btn-primary" type="button">Reserva tu hora</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">            
+            <img src="../../static/imagenes/servicio3.jpg" class=" card-img-top" alt="meca3" width="100%" height="218px" aria-label="Marcador de posición: tapa de imagen" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Servicio3</title><rect width="100%" height="100%" fill="#868e96"></rect> <text x="50%" y="50%" fill="#dee2e6" dy=".3em"></text></svg>
+            <div class="card-body">
+              <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Escaner</font></font></h5>
+              <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Realizamos escaneo del vehiculo para encontrar fallas presentes y detectar posibles fallas futuras</font></font></p>
+              <p>Tiempo Estimado: 3 horas</p>
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <a href="{% url 'reserva'%}">
+                <button class="btn btn-primary" type="button">Reserva tu hora</button>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">            
+            <img src="../../static/imagenes/servicio4.jpg" class="card-img-top" alt="meca4" width="100%" height="218px" aria-label="Marcador de posición: tapa de imagen" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Servicio4</title><rect width="100%" height="100%" fill="#868e96"></rect> <text x="50%" y="50%" fill="#dee2e6" dy=".3em"></text></svg>
+            <div class="card-body">
+              <h5 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mantenimiento general</font></font></h5>
+              <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">realizaremos todos los mantenimientos preventivos con todos los cuidados que tu vehiculo necesita </font></font></p>
+              <p>Tiempo Estimado: 1 dia </p>
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <a href="{% url 'reserva'%}">
+                  <button class="btn btn-primary" type="button">Reserva tu hora</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        </div>
+      </div>
+    </div>
+{% endblock%}

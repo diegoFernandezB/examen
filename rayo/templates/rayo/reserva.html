@@ -1,0 +1,44 @@
+{% extends 'rayo/base.html' %}
+
+{% load static %}
+{% block content %}
+     <div class="container-fluid h-100">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12">
+            <form class="was-invalidated">
+              <h1 class="text-center mb-8">Reservar</h1>
+              <div class="form-group col-sm-4">
+                <label for="validationCustom01" class="form-label">Nombre Completo</label>
+                <input type="text" class="form-control" id="validationCustom01" value="" required>
+                <div class="valid-feedback">Perfecto</div>
+              </div>
+
+              <div class="form-group col-sm-4">
+                <label for="label"><b>Correo Electrónico</b></label>
+                <input type="email" class="form-control" id="text" placeholder="jsoto@gmail.com" required="">
+                <div class="valid-feedback">Correo Electrónico Valido!</div><div class="invalid-feedback">Por favor ingrese un correo electrónico valido.</div>
+              </div>
+              <div class="form-group col-sm-4">
+                <label for="validationCustomUsername" class="form-label">Número De Teléfono</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text" id="inputGroupPrepend">+569</span>
+                  <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required="">
+                  <div class="valid-feedback">Muchas Gracias!</div><div class="invalid-feedback">Por favor ingrese un número de teléfono valido.</div>
+                </div>
+              </div>
+              <div class="form-group col-sm-4">
+                <label for="fecha"><b>dia de reserva</b></label>
+                <input type="date" class="form-control" id="fecha" required="">
+              </div>
+              <div class="form-group col-sm-4">
+                <label for="hora"><b>Horario de preferencia</b></label>
+                <input type="time" class="form-control" id="hora" required="">
+              </div>             
+             
+              <button type="submit" class="btn btn-primary btn-block">Reservar</button>
+              
+            </form>
+          </div>
+        </div>
+     </div>
+  {% endblock%}
