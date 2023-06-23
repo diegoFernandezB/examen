@@ -1,0 +1,52 @@
+{% extends 'rayo/base.html' %}
+
+{% load static %}
+{% block content %}
+  <div class=" ">
+  <div class="container-fluid h-100">
+    <div class="row align-items-center">
+      <div class="col-sm-12">
+        <form  id="registro">
+          <h1 class="text-center mb-4">Registrarse</h1>
+          <div class="form-group col-sm-4">
+            <label for="label"><b>Nombre Completo</b></label>
+            <input type="text" class="" id="nombre" placeholder="Juan soto" required>
+            <div id="error"></div>
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="label"><b>Usuario</b></label>
+            <input type="text" class="form-control" id="usuario" placeholder="jsoto" required>
+            <div id="error2"></div>
+            <div class="valid-feedback">Usuario Disponible</div><div class="invalid-feedback">Ese usuario ya no está disponible</div>
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="label"><b>correo electonico</b></label>
+            <input type="email" class="form-control" id="mail" placeholder="jsoto@gmail.com" required>
+            <div id="error3"></div>
+            <div class="valid-feedback">Correo Electrónico Valido!</div><div class="invalid-feedback">Por favor ingrese un correo electrónico valido.</div>
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="label"><b>confirme correo electonico</b></label>
+            <input type="email" class="form-control" id="mail2" placeholder="jsoto@gmail.com" required>
+            <div id="error4"></div>
+            <div class="valid-feedback">Correo Electrónico Valido!</div><div class="invalid-feedback">Las direcciones de correo no coinciden</div>
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="password"><b>contraseña</b></label>
+            <input type="password" class="form-control" id="password" required>
+            <div id="error5"></div>
+            <div class="invalid-feedback">La contraseña debe tener un mínimo de 6 caracteres, incluir números, letras en mayúsculas y minúsculas e incluir un carácter especial.</div>
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="password2"><b>repetir contraseña</b></label>
+            <input type="password" class="form-control" id="password2"  required>
+            <div id="error6"></div>
+            <div class="invalid-feedback">La contraseña debe tener un mínimo de 6 caracteres, incluir números, letras en mayúsculas y minúsculas e incluir un carácter especial.</div>
+          </div>
+          <button type="submit" onclick=" return validarform();" class="btn btn-primary btn-block">Registrarse</button>
+        </form>    
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock%}

@@ -1,0 +1,27 @@
+{% extends 'rayo/base.html' %}
+
+{% load static %}
+{% block content %}  
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <section id ="galeria">
+          <img src="../../static/imagenes/imagen3.webp" class="img-fluid rounded-start" alt="job3_img1">
+          <img src="../../static/imagenes/piston2.jpg" class="img-fluid rounded-start" alt="job3_img2">
+          <img src="../../static/imagenes/piston3.jpg" class="img-fluid rounded-start" alt="job3_img3">
+          <img src="../../static/imagenes/piston4.jpg" class="img-fluid rounded-start" alt="job3_img4">
+        </section>
+      </div>
+      <div class="col-4">
+        <div class="card-body">
+          <h5 class="card-title">Tipo de auto : Todoterreno<br></h5>          
+          <p class="card-text">Fecha de ingreso : 08/04/2023<br>Tiempo estimado de trabajo : 2 semanas<br>Diagnóstico : Daños en los Pistones<br>Herramientas utilizadas<br></p>         
+          <p class="card-text">Juego de llaves<br>Alzador de auto<br>Poleas para el motor</p>
+          <h5>Trabajo realizado</h5>
+          <p> vehiculo ingresa al taller sin fuerza en el motor, se realiza revision y se detecta los pistones  <br>dañados,se procede al cambio previa aprovacion del cliente</p>        
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>   
+{% endblock %}

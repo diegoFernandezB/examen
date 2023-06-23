@@ -1,0 +1,116 @@
+{% extends 'rayo/base.html' %}
+
+{% load static %}
+{% block content %}
+
+    <div>
+        <h1>Nuestros Últimos Trabajos</h1>
+        
+        <div id="carousel" class="carousel slide " data-bs-ride="carousel" data-bs-interval="2000" data-bs-pause="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="{% url 'trabajo1'%}">
+                <img src="../../static/imagenes/imagen1.webp" class="d-block w-100 img-fluid" alt="...">
+              </a>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Alineación y balanceo</h5>
+                  <p>Trabajo Realizado por Valentin Muñoz </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <a href="{% url 'trabajo2'%}">
+                <img src="../../static/imagenes/imagen2.webp" class="d-block w-100 img-fluid" alt="...">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Reparacion de motor dañado </h5>
+                  <p>Trabajo Realizado por Eliseo Cuevas</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <a href="{% url 'trabajo3'%}">
+                <img src="../../static/imagenes/imagen3.webp" class="d-block w-100 img-fluid" alt="...">
+                </a>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Cambio de pistones</h5>
+                  <p>Trabajo Realizado por Valentin Muñoz</p>
+                </div>
+              </div>
+                <div class="carousel-item">
+                    <a href="{% url 'trabajo4'%}">
+                    <img src="../../static/imagenes/imagen4.webp" class="d-block w-100 img-fluid" alt="...">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Renovacion electrica total</h5>
+                      <p>Trabajo Realizado por Patricio Araya</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="{% url 'trabajo5'%}">
+                    <img src="../../static/imagenes/imagen5.webp" class="d-block w-100 img-fluid" alt="...">
+                    </a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Cambio de radiador</h5>
+                      <p>Trabajo Realizado por Eliseo Cuevas</p>
+                    </div>
+                  </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+
+          <div class="imagenjq">
+            <button class="botnBuscar" id="btnBuscarUsuarios">Usuarios que confiaron en nosotros</button>
+            <div id="resultados"></div>
+          </div>
+
+          
+
+          
+          
+          <button id="miBoton">Contactenos</button>
+
+          <div id="miModal" class="modal">
+            <div class="modal-contenido">
+              <span class="cerrar">&times;</span>
+              <h2>Formulario de contacto</h2>
+              <form class="was-validated">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombreind" name="nombre" placeholder="juan soto" required>
+          
+                <label for="email">Email:</label>
+                <input type="email" id="emailind" name="email" placeholder="jsoto@gmail.com" required>
+
+                
+                <label for="telefono">Telefono:</label>  
+                <div class="input-group mb-3">
+                  <span class="input-group-text">+56</span>
+                  <div class="form-floating">
+                  <input type="tel" id="telefonoind" placeholder="9 8745 6987">
+                    
+                  </div>
+                </div>
+          
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensajeind" placeholder="En que podemos ayudarte..." required></textarea>
+          
+                <input id="enviarind" type="submit" value="Enviar">
+              </form>
+            </div>
+          </div>      
+    </div>
+
+{% endblock %}
+
