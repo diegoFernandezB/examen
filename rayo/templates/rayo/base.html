@@ -34,16 +34,20 @@
         </li>
         
         <li class="nav-item">
-          {% if user.is_authenticated%}
-            {{user.username}}          
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'logout'%}">Cerrar Sesión</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'subirArchivo'%}">Subir Trabajo</a>
-            </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Nuestros Últimos Trabajos            
+            {% if user.is_authenticated %}
+              {{user.username}}
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url 'subirArchivo'%}">Subir Trabajo</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{% url 'logout'%}">Cerrar Sesión</a></li>
+            </ul>
+            
           {% else %}
-          <a class="nav-link" href="{% url 'login'%}">Iniciar Sesión</a>          
+          <a class="nav-link" href="{% url 'loguin'%}">Iniciar Sesión</a>          
         </li> 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
