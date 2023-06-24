@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import cliente, administrador, mecanico, Archivo
-from django.contrib.auth import authenticate, login 
+from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_exempt 
 from .forms import ArchivoForm
 from django.contrib.auth.decorators import login_required
@@ -28,8 +28,9 @@ def fichamecas(request):
     context = {}
     return render (request, 'rayo/fichamecas.html', context)
 
+
+@csrf_exempt
 @login_required
-@csrf_exempt 
 def loguin(request):
     if request.method == 'POST':
         usuario = request.POST.get('usuario')
@@ -37,11 +38,16 @@ def loguin(request):
         user = authenticate(request, username=usuario, password=password)
         if user is not None:
             login(request, user)
-            return redirect('index')
+            return redirect(index)
         else:
             error_message = 'Credenciales invalidas. Por favor ingrese nuevamente.'
-            return render(request, 'rayo/loguin.html',{'error_message': error_message})
-    return render (request, 'rayo/loguin.html')
+            return render(request, 'rayo/index.html',{'error_message': error_message})
+    return render (request, 'rayo/index.html')
+
+@login_required
+def cerrar_sesion(request):
+    logout(request)
+    return redirect(index)
 
 def meca1(request):
     context = {}
