@@ -31,7 +31,7 @@ def fichamecas(request):
 
 @csrf_exempt
 @login_required
-def loguin(request):
+def login(request):
     if request.method == 'POST':
         usuario = request.POST.get('usuario')
         password = request.POST.get('password')
