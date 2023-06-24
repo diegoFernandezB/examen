@@ -11,6 +11,7 @@ urlpatterns =[
     path('CrudTrabajos', views.CrudTrabajos, name='CrudTrabajos'),
     path('fichamecas', views.fichamecas, name='fichamecas'),
     path('loguin', views.loguin, name='loguin'),
+    path('login', views.login, name='login'),
     path('meca1', views.meca1, name='meca1'),
     path('meca2', views.meca2, name='meca2'),
     path('meca3', views.meca3, name='meca3'),
@@ -30,6 +31,7 @@ urlpatterns =[
     path('subirArchivo_add', views.subirArchivo_add, name='subirArchivo_add'),
     path('subirArchivo_del/<str:id_archivo>', views.subirArchivo_del, name='subirArchivo_del'),
     path('subirArchivo_edit/<str:id_archivo>', views.subirArchivo_edit, name='subirArchivo_edit'),
+    
     
     ]
 

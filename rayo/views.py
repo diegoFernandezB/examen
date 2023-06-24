@@ -28,6 +28,25 @@ def fichamecas(request):
     context = {}
     return render (request, 'rayo/fichamecas.html', context)
 
+def login(request):
+     if request.method == 'POST':
+        usuario = request.POST.get('usuario')
+        password = request.POST.get('password')
+        user = authenticate(request, usuario=usuario, password=password)
+        if user is not None:
+            login(request, user)
+            if user.is_staff:
+                return redirect('/admin/')  # Redirige al administrador de Django
+            else:
+                return redirect('index')  # Redirige a otra página en caso de no ser un administrador
+        else:
+            error_message = 'Credenciales inválidas. Por favor, ingrese nuevamente.'
+            context = {'error_message': error_message}
+            return render(request, 'rayo/login.html', context)
+     else:
+        context = {}
+        return render(request, 'rayo/loguin.html', context)
+
 
 @csrf_exempt
 @login_required
@@ -42,12 +61,13 @@ def loguin(request):
         else:
             error_message = 'Credenciales invalidas. Por favor ingrese nuevamente.'
             return render(request, 'rayo/index.html',{'error_message': error_message})
-    return render (request, 'rayo/index.html')
+    
+    
 
 @login_required
 def cerrar_sesion(request):
     logout(request)
-    return redirect(index)
+    return redirect('index')
 
 def meca1(request):
     context = {}

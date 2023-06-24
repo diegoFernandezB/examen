@@ -9,15 +9,21 @@
         <form  id="registro">
           <h1 class="text-center mb-4">Registrarse</h1>
           <div class="form-group col-sm-4">
-            <label for="label"><b>Nombre Completo</b></label>
-            <input type="text" class="" id="nombre" placeholder="Juan soto" required>
+            <label for="label"><b>Nombre</b></label>
+            <input type="text" class="form-control" id="nombre" placeholder="Juan" required>
             <div id="error"></div>
           </div>
           <div class="form-group col-sm-4">
-            <label for="label"><b>Usuario</b></label>
-            <input type="text" class="form-control" id="usuario" placeholder="jsoto" required>
+            <label for="label"><b>Apellido</b></label>
+            <input type="text" class="form-control" id="usuario" placeholder="soto" required >
             <div id="error2"></div>
             <div class="valid-feedback">Usuario Disponible</div><div class="invalid-feedback">Ese usuario ya no está disponible</div>
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="label"><b>Rut (sin puntos y con guion)</b></label>
+            <input type="text" class="form-control" id="rut" placeholder="11111111-1" >
+            <div id="error7"></div>
+            <p class="" id="msgerror"></p>
           </div>
           <div class="form-group col-sm-4">
             <label for="label"><b>correo electonico</b></label>
@@ -43,10 +49,16 @@
             <div id="error6"></div>
             <div class="invalid-feedback">La contraseña debe tener un mínimo de 6 caracteres, incluir números, letras en mayúsculas y minúsculas e incluir un carácter especial.</div>
           </div>
-          <button type="submit" onclick=" return validarform();" class="btn btn-primary btn-block">Registrarse</button>
+          <button type="submit" id="btnvalida" onclick=" return validarform();" class="btn btn-primary btn-block">Registrarse</button>
         </form>    
       </div>
     </div>
   </div>
 </div>
+
+
+ 
+
+
+<script src="{% static 'js/funciones.js'%}" ></script>
 {% endblock%}
