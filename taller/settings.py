@@ -71,6 +71,8 @@ TEMPLATES = [
 login_redirect_url = "index"
 logout_redirect_url = "index"
 
+
+
 WSGI_APPLICATION = 'taller.wsgi.application'
 
 

@@ -4,6 +4,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_exempt 
 from .forms import ArchivoForm
 from django.contrib.auth.decorators import login_required
+from django import forms
+from django.contrib.auth.forms import AuthenticationForm
 # Create your views here.
 
 
@@ -21,7 +23,7 @@ def carritoCompras(request):
     return render (request, 'rayo/carritoCompras.html', context)
 
 def CrudTrabajos(request):
-    context = {}
+    context = {'CrudTrabajos': CrudTrabajos}
     return render (request, 'rayo/CrudTrabajos.html', context)
 
 def fichamecas(request):
@@ -47,22 +49,14 @@ def login(request):
         context = {}
         return render(request, 'rayo/loguin.html', context)
 
+class LoginForm(AuthenticationForm):
+    usuario = forms.CharField(label='Usuario')
 
 @csrf_exempt
-@login_required
+
 def loguin(request):
-    if request.method == 'POST':
-        usuario = request.POST.get('usuario')
-        password = request.POST.get('password')
-        user = authenticate(request, username=usuario, password=password)
-        if user is not None:
-            login(request, user)
-            return redirect(index)
-        else:
-            error_message = 'Credenciales invalidas. Por favor ingrese nuevamente.'
-            return render(request, 'rayo/index.html',{'error_message': error_message})
-    
-    
+    form = LoginForm()
+    return render(request, 'index', {'form': form})
 
 @login_required
 def cerrar_sesion(request):
@@ -194,3 +188,25 @@ def base(request):
     context= {}
     return render (request, 'rayo/base.html', context)
 
+
+def clientesADD(request):
+    if request.method == 'POST':
+        rut = request.POST.get("rut")
+        nombre = request.POST.get("nombre")
+        aPaterno = request.POST.get("aPaterno")
+        aMaterno = request.POST.get("aMaterno")
+        email = request.POST.get("email")
+        contrasena = request.POST.get("contrasena")
+        patente = request.POST.get("patente")
+        telefono = request.POST.get("telefono")
+        direccion = request.POST.get("direccion")
+
+        nuevo_cliente = cliente(rut_cli=rut, nom_cli=nombre, appater_cli=aPaterno, apmater_cli=aMaterno,
+                                email_cli=email, contrasena_cli=contrasena, patente=patente,
+                                fono_cli=telefono, direccion_cli=direccion)
+        nuevo_cliente.save()
+        
+        context = {'mensaje': "Ok, datos grabados..."}
+        return render(request, 'rayo/CrudTrabajos.html', context)
+    
+    return render(request, 'registro.html')

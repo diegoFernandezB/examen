@@ -87,6 +87,7 @@
               <span class="cerrar">&times;</span>
               <h2>Formulario de contacto</h2>
               <form class="was-validated">
+                {% csrf_token %}
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombreind" name="nombre" placeholder="juan soto" required>
           

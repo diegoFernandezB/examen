@@ -7,11 +7,12 @@
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{formulario.as_table}}       
-        <button type="submit" class="btn btn-primary" name="subirArchivobtn">Subir Archivo</button>
+            <textarea name="texto" tipe="file" rows="1" cols="10"></textarea>
+            <br>
+            <input type="file" name="archivo">
+            <br>
+            <button type="submit" class="btn btn-primary" name="subirArchivobtn">Subir Archivo</button>
+
     </form>
-    <div class="form-floating mb-3">
-        <input type="text" readonly class="form-control-plaintext" id="floatingPlaintextInput" placeholder="name@example.com" value="Esta publicación debe ser aprovada por el Administrador">
-        <label for="floatingPlaintextInput">Debes subir al menos una imagen de tu trabajo</label>
-    </div>
 </div>
 {% endblock%} 

@@ -5,5 +5,30 @@
 
 
 
+<body>
+    <div style="text-align: center;">
+        <form method="POST" action="/rayo/CrudTrabajos">
+            {% csrf_token %}
+            <pre>Rut:            <input type="text" name="rut"></pre>
+            <pre>Nombre:         <input type="text" name="nombre"></pre>
+            <pre>Apellido P.:    <input type="text" name="aPaterno"></pre>
+            <pre>Apellido M.:    <input type="text" name="aMaterno"></pre>
+            <pre>Email cli:      <input type="text" name="email"></pre>
+            <pre>Contrasena cli: <input type="password" name="contrasena"></pre>
+            <pre>Patente:        <input type="text" name="patente"></pre>
+            <pre>Fono cli:       <input type="text" name="telefono"></pre>
+            <pre>Dirección:      <input type="text" name="direccion"></pre>
+            <input type="submit" value="Enviar">
+          </form>
+      <a href=> Volver </a>
+      <br>
+      <div id="idMensajes">
+        {% if mensaje %}
+        {{mensaje}}
+        {% endif %}
+      </div>
+    </div>
+  </body>
+  </html>
 
 {% endblock%}

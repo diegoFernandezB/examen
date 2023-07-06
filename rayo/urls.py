@@ -1,6 +1,7 @@
 #from django.conf.urls import url
 from django.urls import path
 from. import views
+from django.contrib.auth import views as auth_views
 
 
 
@@ -26,12 +27,12 @@ urlpatterns =[
     path('trabajo4', views.trabajo4, name='trabajo4'),
     path('trabajo5', views.trabajo5, name='trabajo5'),
     path('base', views.base, name='base'),
-
+    path('rayo/CrudTrabajos/', views.clientesADD, name='clientes_add'),
     path('subirArchivo', views.subirArchivo, name='subirArchivo'),
     path('subirArchivo_add', views.subirArchivo_add, name='subirArchivo_add'),
     path('subirArchivo_del/<str:id_archivo>', views.subirArchivo_del, name='subirArchivo_del'),
     path('subirArchivo_edit/<str:id_archivo>', views.subirArchivo_edit, name='subirArchivo_edit'),
-    
+   
     
     ]
 
