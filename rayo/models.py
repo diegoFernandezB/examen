@@ -85,4 +85,3 @@ class palabraClave (models.Model):
         return str(self.palabra)
     
     
-                               

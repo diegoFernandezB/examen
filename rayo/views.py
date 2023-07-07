@@ -23,8 +23,9 @@ def carritoCompras(request):
     return render (request, 'rayo/carritoCompras.html', context)
 
 def CrudTrabajos(request):
-    context = {'CrudTrabajos': CrudTrabajos}
-    return render (request, 'rayo/CrudTrabajos.html', context)
+    clientes = cliente.objects.all()
+    context = {'clientes': clientes}
+    return render(request, 'rayo/CrudTrabajos.html', context)
 
 def fichamecas(request):
     context = {}
@@ -189,7 +190,7 @@ def base(request):
     return render (request, 'rayo/base.html', context)
 
 
-def clientesADD(request):
+def agregar_usuario(request):
     if request.method == 'POST':
         rut = request.POST.get("rut")
         nombre = request.POST.get("nombre")
@@ -205,8 +206,55 @@ def clientesADD(request):
                                 email_cli=email, contrasena_cli=contrasena, patente=patente,
                                 fono_cli=telefono, direccion_cli=direccion)
         nuevo_cliente.save()
-        
-        context = {'mensaje': "Ok, datos grabados..."}
-        return render(request, 'rayo/CrudTrabajos.html', context)
-    
-    return render(request, 'registro.html')
+
+        return redirect('registro')  # Redirige a una página de éxito o a donde desees
+
+    return render(request, 'registro')
+
+
+def listar_clientes(request):
+    clientes = cliente.objects.all()
+    fields = cliente._meta.get_fields()
+
+    context = {
+        'clientes': clientes,
+        'fields': fields,
+    }
+
+    return render(request, 'rayo/CrudTrabajos.html', context)
+
+
+
+def modificar_cliente(request):
+    if request.method == 'POST':
+        rut_cli = request.POST.get('rut_cli')
+        nom_cli = request.POST.get('nom_cli')
+        appater_cli = request.POST.get('appater_cli')
+        apmater_cli = request.POST.get('apmater_cli')
+        email_cli = request.POST.get('email_cli')
+        patente = request.POST.get('patente')
+        fono_cli = request.POST.get('fono_cli')
+        direccion_cli = request.POST.get('direccion_cli')
+
+        # Buscar el cliente existente por su rut
+        cliente = cliente.objects.get(rut_cli=rut_cli)
+
+        # Actualizar los campos del cliente
+        cliente.nom_cli = nom_cli
+        cliente.appater_cli = appater_cli
+        cliente.apmater_cli = apmater_cli
+        cliente.email_cli = email_cli
+        cliente.patente = patente
+        cliente.fono_cli = fono_cli
+        cliente.direccion_cli = direccion_cli
+
+        # Guardar los cambios en la base de datos
+        cliente.save()
+
+        # Redireccionar a la vista CrudClientes
+        return redirect('CrudClientes')
+    else:
+        # Obtener todos los clientes
+        clientes = cliente.objects.all()
+
+    return render(request, 'CrudClientes', {'clientes': clientes})
